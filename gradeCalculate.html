@@ -38,43 +38,43 @@
             var gpaPoint;
             switch (marks > 0) {
                 case (marks >= 10 && marks < 20):
-                    gpa = 0.8;
+                    gpa ="0.8";
                     gpaPoint = "E"
                     break;
                 case (marks >= 20 && marks < 30):
-                    gpa = 1.2;
+                    gpa = "1.2";
                     gpaPoint = "D"
                     break;
                 case (marks >= 30 && marks < 40):
-                    gpa = 1.6;
+                    gpa = "1.6";
                     gpaPoint = "D+"
                     break;
                 case (marks >= 40 && marks < 50):
-                    gpa = 2.0;
+                    gpa = "2.0";
                     gpaPoint = "C"
                     break;
                 case (marks >= 50 && marks < 60):
-                    gpa = 2.4;
+                    gpa ="2.4";
                     gpaPoint = "C+"
                     break;
                 case (marks >= 60 && marks < 70):
-                    gpa = 2.8;
+                    gpa = "2.8";
                     gpaPoint = "B"
                     break;
                 case (marks >= 70 && marks < 80):
-                    gpa = 3.2;
+                    gpa =" 3.2";
                     gpaPoint = "B+"
                     break;
                 case (marks >= 80 && marks < 90):
-                    gpa = 3.6;
+                    gpa = "3.6";
                     gpaPoint = "A"
                     break;
                 case (marks >= 90 && marks <= 100):
-                    gpa = 4.0;
-                    gpaPoint = "A"
+                    gpa = "4.0";
+                    gpaPoint = "A+"
                     break;
                 default:
-                    gpa = 0;
+                    gpa = "0";
                     gpaPoint = "Not Valid"
 
             }
@@ -152,7 +152,7 @@
                 {{studentArr[0].name}}
             </div>
             <div class="card-body">
-                <table class="table table-sm table-dark">
+                <!-- <table class="table table-sm table-dark">
                     <thead>
                         <tr>
                             <th scope="col">Subject</th>
@@ -170,8 +170,42 @@
                         </tr>
 
                     </tbody>
-                </table>
-
+                </table> -->
+                <div  style="border: 1px solid;padding: 0px 2px 2px 1px;">
+                    <div style="height: 105px;margin-top: 10px;">
+                        <div style="width: 120px;height: 118px;float: left;">
+                            <img src="https://us.123rf.com/450wm/glopphy/glopphy1603/glopphy160300006/53035443-stock-vector-book-teamwork-education-logo-vector-image.jpg" style="width: 100%;height: 100%;">
+                        </div>
+                        <div style="width: calc(100% - 120px);float: left;place-content: center; height: 120px;">
+                            <div style="display:flex;place-content: center;">
+                                <span style="font-size: 25px;">school</span>
+                            </div>
+                            <div style="display:flex;place-content: center;">
+                                <span style="font-size: 15px;">school</span>
+                            </div>
+                            <div style="display:flex;place-content: center;">
+                                <span style="font-size: 10px;">school</span>
+                            </div>
+                  
+                        </div>
+                    </div>
+                    <div>
+                     <table border="1" style="width: 100%;border-collapse:collapse">
+                        <tr>
+                            <th scope="col">Subject</th>
+                            <th scope="col">Marks</th>
+                            <th scope="col">GPA Point</th>
+                            <th scope="col">GPA</th>
+                        </tr>
+                        <tr ng-repeat="x in studentArr">
+                            <td scope="row">{{x.subjectName}}</td>
+                            <td>{{x.marks}}</td>
+                            <td>{{x.gpaPoint}}</td>
+                            <td>{{x.gpa}}</td>
+                        </tr>
+                     </table>
+                    </div>
+                   </div>
 
 
             </div>
